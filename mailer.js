@@ -1,8 +1,8 @@
-const nodemailer = require('node-mailer');
+const nodeMailer = require('nodemailer');
 
 const database = require('./database');
 
-const transport = nodemailer.createTransport({
+const transport = nodeMailer.createTransport({
   service: 'Gmail',
   auth: {
     user: 'ajmalsiddiqui414@gmail.com',
