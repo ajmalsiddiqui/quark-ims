@@ -1,4 +1,4 @@
-const mailer = require('node-mailer');
+const nodemailer = require('node-mailer');
 
 const database = require('./database');
 
