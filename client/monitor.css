@@ -54,11 +54,13 @@ body {
 }
 
 .alert {
-  display: none;
-  position: relative;
-  top: -100%;
-  right: 3%;
-  height: 20%;
-  width: 20%;
   z-index: 4;
+}
+
+#copy-room {
+  position: relative;
+  top: -90%;
+  right: 8%;
+  height: 15%;
+  width: 7.5%;
 }
