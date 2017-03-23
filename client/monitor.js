@@ -16,7 +16,7 @@ function poster() {
 
 $(document).ready(() => {
   $('.alert').css('display', 'none');
-  $.get("http://127.0.0.1:8080/fire", (data) => {
+  $.get("http://quark-ims.herokuapp.com/fire", (data) => {
     data = new Array(data);
     currentRoomsArray = data[0];
     currentRoomsArray.forEach((room) => {
