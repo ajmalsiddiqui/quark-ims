@@ -40,9 +40,11 @@ router.get('/fire', (req, res) => {
 router.post('/fire', (req, res) => {
   let data = req.body;
   console.log(data);
+  res.writeHead(200, {'content-type':'text/plain'});
   if(data.estatus){
     rooms.setE(data.id);
   }
+  res.end('Yo bro');
 });
 
 router.post('/notify', (req, res) => {
