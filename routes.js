@@ -39,9 +39,10 @@ router.get('/fire', (req, res) => {
 
 router.post('/fire', (req, res) => {
   let data = req.body;
-  console.log(data);
+  console.log(data.estatus);
   res.writeHead(200, {'content-type':'text/plain'});
   if(data.estatus === "true"){
+    console.log('yo');
     rooms.setE(data.id);
   }
   res.end('Yo bro');
