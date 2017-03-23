@@ -28,7 +28,7 @@ function send(){
   database.getDocs((doc) => {
     let mailText = mailOptions.text;
     mailOptions.to = doc.email;
-    mailOptions.text = 'Hello' + doc.name + '\n\n' + mailText;
+    mailOptions.text = 'Hello ' + doc.name + '\n\n' + mailText;
     transport.sendMail(mailOptions, (err, info) => {
       if(err){
         console.log(err);

@@ -2,24 +2,35 @@ let currentRoomsArray = [];
 
 //let currentRooms = //get array here
 
+function poster() {
+  $.ajax({
+                url: "http://localhost:8080/notify",
+                type: "post",
+                data: {"room":"lobby", "estatus":true},
+                datatype: "json",
+                success: function(d) {
+                    alert(d);
+                }
+            });
+}
+
 $(document).ready(() => {
   $('.alert').css('display', 'none');
-  $('#yoyo').click(() => {
-    $.get("http://127.0.0.1:8080/fire", (data) => {
-      data = new Array(data);
-      currentRoomsArray = data[0];
-      currentRoomsArray.forEach((room) => {
-        //room = JSON.parse(room);
-        console.log(room);
-        if(room.estatus){
-          display(room.id);
-        }
-        else{
-          hide(room.id);
-        }
-      });
+  $.get("http://127.0.0.1:8080/fire", (data) => {
+    data = new Array(data);
+    currentRoomsArray = data[0];
+    currentRoomsArray.forEach((room) => {
+      //room = JSON.parse(room);
+      console.log(room);
+      if(room.estatus){
+        display(room.id);
+      }
+      else{
+        hide(room.id);
+      }
     });
   });
+  //poster();
 });
 
 function display(roomID){

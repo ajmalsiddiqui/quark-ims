@@ -28,7 +28,8 @@ router.get('/', (req, res) => {
 });
 
 router.get('/fire', (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+  //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+  res.setHeader('Access-Control-Allow-Origin', 'http://quark-ims.herokuapp.com');
   res.writeHead(200, {'content-type':'application/json'});
   rooms.returnRooms((roomlist) => {
     res.write(JSON.stringify(roomlist));
@@ -46,7 +47,7 @@ router.post('/fire', (req, res) => {
 
 router.post('/notify', (req, res) => {
   let data = req.body;
-  mailer.setOptions(req.body.room);
+  mailer.setOptions([req.body.room]);
   mailer.send();
   res.writeHead(200, {'content-type': 'text/plain'});
   res.end('Concerned personnel of authority have been notified by email.');
