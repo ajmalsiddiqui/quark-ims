@@ -1,15 +1,15 @@
 let rooms = [
   {
       'id': 'copy-room',
-      'estatus': false
+      'estatus': 'false'
   },
   {
     'id':'lobby',
-    'estatus': false
+    'estatus': 'false'
   },
   {
     'id':'main-office',
-    'estatus': false
+    'estatus': 'false'
   }
 ];
 
