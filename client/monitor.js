@@ -6,7 +6,7 @@ function poster() {
   $.ajax({
                 url: "http://localhost:8080/notify",
                 type: "post",
-                data: {"room":"lobby", "estatus":true},
+                data: {"room":"lobby", "estatus":'true'},
                 datatype: "json",
                 success: function(d) {
                     alert(d);

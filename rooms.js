@@ -16,7 +16,7 @@ let rooms = [
 function setE(id){
   rooms.forEach((room) => {
     if(room.id === id){
-      room.estatus = true;
+      room.estatus = 'true';
       return;
     }
   });
