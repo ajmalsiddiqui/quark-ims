@@ -35,10 +35,10 @@ $(document).ready(() => {
 
 function display(roomID){
   roomID = '#' + roomID;
-  $(roomID).show(slow);
+  $(roomID).show(500);
 }
 
 function hide(roomID){
   roomID = '#' + roomID;
-  $(roomID).hide(slow);
+  $(roomID).hide(500);
 }
