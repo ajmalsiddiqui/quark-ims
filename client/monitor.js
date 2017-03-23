@@ -22,7 +22,7 @@ $(document).ready(() => {
     currentRoomsArray.forEach((room) => {
       //room = JSON.parse(room);
       console.log(room);
-      if(room.estatus){
+      if(room.estatus === 'false'){
         display(room.id);
       }
       else{
