@@ -19,6 +19,7 @@ $(document).ready(() => {
   $.get("http://quark-ims.herokuapp.com/fire", (data) => {
     data = new Array(data);
     currentRoomsArray = data[0];
+    console.log(currentRoomsArray);
     currentRoomsArray.forEach((room) => {
       //room = JSON.parse(room);
       console.log(room);
