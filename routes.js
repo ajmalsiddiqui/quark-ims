@@ -43,7 +43,10 @@ router.post('/fire', (req, res) => {
   res.writeHead(200, {'content-type':'text/plain'});
   if(data.estatus === "true"){
     console.log('yo');
-    rooms.setE(data.id);
+    rooms.setE(data.id, 'true');
+  }
+  else{
+    rooms.setE(data.id, 'false');
   }
   res.end('Yo bro');
 });

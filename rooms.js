@@ -13,10 +13,10 @@ let rooms = [
   }
 ];
 
-function setE(id){
+function setE(id, val){
   rooms.forEach((room) => {
     if(room.id === id){
-      room.estatus = 'true';
+      room.estatus = val;
       return;
     }
   });
