@@ -22,7 +22,7 @@ $(document).ready(() => {
     currentRoomsArray.forEach((room) => {
       //room = JSON.parse(room);
       console.log(room);
-      if(room.estatus === 'false'){
+      if(room.estatus === 'true'){
         display(room.id);
       }
       else{
@@ -35,10 +35,10 @@ $(document).ready(() => {
 
 function display(roomID){
   roomID = '#' + roomID;
-  $(roomID).show();
+  $(roomID).show(slow);
 }
 
 function hide(roomID){
   roomID = '#' + roomID;
-  $(roomID).hide();
+  $(roomID).hide(slow);
 }
